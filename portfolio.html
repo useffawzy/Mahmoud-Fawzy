@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Mohamed Fawzy | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // blue-900
+                        secondary: '#3b82f6', // blue-500
+                        dark: '#0f172a', // slate-900
+                        light: '#f8fafc', // slate-50
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles for extra polish */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 4px solid #eff6ff;
+            position: absolute;
+            left: -8px;
+            top: 24px;
+        }
+        .video-container:hover .play-icon {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-secondary selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-primary tracking-tighter">MF<span class="text-secondary">.</span></a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-secondary font-medium transition">About</a>
+                    <a href="#experience" class="text-slate-600 hover:text-secondary font-medium transition">Experience</a>
+                    <a href="#certificates" class="text-slate-600 hover:text-secondary font-medium transition">Certificates</a>
+                    <a href="#skills" class="text-slate-600 hover:text-secondary font-medium transition">Skills</a>
+                    <a href="#projects" class="text-slate-600 hover:text-secondary font-medium transition">Projects</a>
+                    <a href="#contact" class="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition font-medium shadow-md">Contact Me</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-slate-200 shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50 rounded-md">About</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50 rounded-md">Experience</a>
+                <a href="#certificates" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50 rounded-md">Certificates</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50 rounded-md">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50 rounded-md">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-primary hover:text-secondary hover:bg-slate-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 flex items-center min-h-[90vh] bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-3/5 space-y-6">
+                <p class="text-secondary font-semibold tracking-wide uppercase">Civil Engineer</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-dark leading-tight">
+                    Mahmoud <br />Mohamed Fawzy
+                </h1>
+                <p class="text-xl text-slate-600 font-light max-w-lg">
+                    Project Coordinator & Planning Engineer dedicated to precision, timely execution, and seamless coordination across multidisciplinary construction projects.
+                </p>
+                
+                <div class="flex gap-4 pt-4">
+                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-fawzy-113686262" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
+                        <i class="fa-brands fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="pt-6 flex gap-4">
+                    <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">View Work</a>
+                    <a href="#contact" class="bg-white text-primary border border-primary px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition">Get in Touch</a>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-2/5 flex justify-center">
+                <!-- Abstract Graphic / Portrait Placeholder -->
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
+                    <img src="profile.png" alt="Mahmoud Mohamed Fawzy" class="relative z-10 w-full h-full object-cover object-top rounded-full border-8 border-white shadow-2xl">
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-4 right-4 z-20 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Experience</p>
+                            <p class="text-sm font-bold text-dark">4+ Years</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Education</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+                <div class="flex items-start gap-6 relative z-10">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-primary shrink-0">
+                        <i class="fa-solid fa-graduation-cap text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-2">Bachelor of Civil Engineering</h3>
+                        <p class="text-lg text-primary font-medium mb-3">Cairo University, Egypt</p>
+                        <div class="flex flex-wrap gap-4 text-sm text-slate-600 font-medium mb-4">
+                            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar"></i> May 2021</span>
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-400"></i> Overall Grade: Good</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 mt-4">
+                            <p class="text-slate-700"><span class="font-semibold text-primary">Graduation Project:</span> Concrete Project (Excellent Grade)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Professional Experience</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-0 md:pl-0">
+                
+                <!-- Company: Dar Al Handasah -->
+                <div class="mb-12 relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot group-hover:bg-primary group-hover:border-blue-100 transition-colors"></div>
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 group-hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-dark">Dar Al Handasah</h3>
+                            <span class="text-sm font-semibold text-secondary bg-blue-50 px-3 py-1 rounded-full w-max mt-2 md:mt-0">06/2023 - Present</span>
+                        </div>
+                        
+                        <div class="space-y-8">
+                            <!-- Role 1 -->
+                            <div class="border-l-2 border-blue-100 pl-4 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-secondary -left-[5px] top-2"></div>
+                                <h4 class="text-lg font-bold text-primary">Planning Engineer</h4>
+                                <p class="text-sm text-slate-500 mb-3 font-medium">10/2025 - Present</p>
+                                <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 text-sm">
+                                    <li>Develop and prepare project schedules using Primavera P6.</li>
+                                    <li>Monitor project progress and compare actual performance against baseline.</li>
+                                    <li>Analyze schedule variances and recommend corrective actions.</li>
+                                    <li>Prepare weekly and monthly progress reports.</li>
+                                    <li>Coordinate with execution teams to ensure adherence to the project plan.</li>
+                                    <li>Identify and monitor the Critical Path of the project.</li>
+                                    <li>Prepare recovery and mitigation plans in case of delays.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 2 -->
+                            <div class="border-l-2 border-blue-100 pl-4 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-secondary -left-[5px] top-2"></div>
+                                <h4 class="text-lg font-bold text-primary">Project Coordinator</h4>
+                                <p class="text-sm text-slate-500 mb-3 font-medium">04/2024 - 10/2025</p>
+                                <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 text-sm">
+                                    <li>Coordinated activities to ensure timelines, scope, and deliverables were met.</li>
+                                    <li>Assisted in planning, executing, and closing projects according to company standards.</li>
+                                    <li>Acted as a liaison between project managers, team members, and stakeholders.</li>
+                                    <li>Prepared and maintained project documentation, schedules, and reports.</li>
+                                    <li>Organized meetings, prepared agendas, and documented meeting minutes.</li>
+                                    <li>Monitored budgets and supported cost control activities.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 3 -->
+                            <div class="border-l-2 border-blue-100 pl-4 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-secondary -left-[5px] top-2"></div>
+                                <h4 class="text-lg font-bold text-primary">Site Monitoring Engineer (Client Representative)</h4>
+                                <p class="text-sm text-slate-500 mb-3 font-medium">06/2023 - 04/2024</p>
+                                <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 text-sm">
+                                    <li>Conducted regular site visits to monitor construction progress.</li>
+                                    <li>Assessed actual execution status against planned schedules and milestones.</li>
+                                    <li>Evaluated construction progress percentages (e.g., 50%, 80%) for different elements.</li>
+                                    <li>Prepared progress reports reflecting current site conditions.</li>
+                                    <li>Identified completed, ongoing, and delayed construction activities.</li>
+                                    <li>Provided technical feedback without direct site supervision.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company: Al-Salam Office -->
+                <div class="mb-4 relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot group-hover:bg-primary group-hover:border-blue-100 transition-colors"></div>
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 group-hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-dark">Al-Salam Office for Contracting & Supplies</h3>
+                            <span class="text-sm font-semibold text-secondary bg-blue-50 px-3 py-1 rounded-full w-max mt-2 md:mt-0">06/2022 - 10/2022</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-primary mb-3">Technical Office and Finishing Engineer</h4>
+                        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 text-sm">
+                            <li>Technical coordination and preparation of project documents.</li>
+                            <li>Supervision of finishing works and quality control.</li>
+                            <li>Coordination with consultants, subcontractors, and site teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Certificates</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Certificate 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-secondary transition-colors group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-certificate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Planning & Controlling (HA Management)</h3>
+                    <p class="text-sm text-slate-500 font-medium mb-6">06/2022 - 10/2022</p>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-secondary mt-1"></i>
+                            <span><strong class="text-slate-800">Proficient in Primavera P6:</strong> creating baseline schedules, defining activities, milestones, and dependencies.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-secondary mt-1"></i>
+                            <span><strong class="text-slate-800">Project Monitoring & Tracking:</strong> updating progress, tracking delays, and analyzing performance.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-secondary mt-1"></i>
+                            <span><strong class="text-slate-800">Reporting & Documentation:</strong> progress reports, variance analysis, project control documentation.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-secondary mt-1"></i>
+                            <span><strong class="text-slate-800">Practical Application:</strong> techniques for effective planning, resource allocation, and schedule optimization.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-secondary transition-colors group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-6">Advanced Structural Diploma</h3>
+                    <p class="text-slate-600 text-sm mb-4">Civil Academy</p>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200">
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            Comprehensive design training encompassing various complex structures including:
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">5-Floor Villa</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">25-Floor Tower</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">Elevated Tank</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">Halls</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">Software utilized: ETABS, SAP, SAFE, AutoCAD, CSI, Revit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Skills & Languages</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Software Skills -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-laptop-code text-secondary"></i> Software & Tools</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Skill Progress -->
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-2">
+                                <span>Primavera P6</span>
+                                <span class="text-slate-400">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-2">
+                                <span>AutoCAD</span>
+                                <span class="text-slate-400">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-2">
+                                <span>MS Office (Word, Excel, PowerPoint)</span>
+                                <span class="text-slate-400">Expert</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <p class="text-sm text-slate-400 mb-3 uppercase tracking-wider">Structural Software</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm hover:border-secondary transition-colors cursor-default">SAP</span>
+                                <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm hover:border-secondary transition-colors cursor-default">ETABS</span>
+                                <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm hover:border-secondary transition-colors cursor-default">SAFE</span>
+                                <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm hover:border-secondary transition-colors cursor-default">CSI Columns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Skills & Languages -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-user-gear text-secondary"></i> Personal Skills</h3>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Strong Communication</span>
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Time Management</span>
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Problem Solving</span>
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Multitasking Ability</span>
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Attention to Detail</span>
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Ability to Work Under Pressure</span>
+                        <span class="px-4 py-2 bg-slate-800/50 text-blue-100 rounded-full text-sm border border-blue-900">Team Player</span>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-earth-americas text-secondary"></i> Languages</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center bg-slate-800 p-4 rounded-xl">
+                            <span class="font-medium">Arabic</span>
+                            <span class="text-xs bg-secondary text-white px-2 py-1 rounded">Native</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-800 p-4 rounded-xl">
+                            <span class="font-medium">English</span>
+                            <span class="text-xs border border-slate-500 text-slate-300 px-2 py-1 rounded">Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Media (Vertical Videos) -->
+    <section id="projects" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Site Monitoring Gallery</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto mb-4">Visual documentation of project progress, site supervision, and structural assessments.</p>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Vertical Video Grid (9:16 Aspect Ratio) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- Video Item 1 -->
+                <div class="video-container relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[9/16] bg-slate-800 group">
+                    <img src="https://placehold.co/720x1280/2a4365/ffffff?text=Site+Progress" alt="Site Video 1" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fa-solid fa-play play-icon text-4xl text-white/80 transition-transform duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                        <p class="text-white text-sm font-semibold truncate">Foundation Pour</p>
+                    </div>
+                </div>
+                
+                <!-- Video Item 2 -->
+                <div class="video-container relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[9/16] bg-slate-800 group">
+                    <img src="https://placehold.co/720x1280/1e40af/ffffff?text=Quality+Control" alt="Site Video 2" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fa-solid fa-play play-icon text-4xl text-white/80 transition-transform duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                        <p class="text-white text-sm font-semibold truncate">Quality Control Check</p>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="video-container relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[9/16] bg-slate-800 group">
+                    <img src="https://placehold.co/720x1280/1e3a8a/ffffff?text=Steel+Fixing" alt="Site Video 3" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fa-solid fa-play play-icon text-4xl text-white/80 transition-transform duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                        <p class="text-white text-sm font-semibold truncate">Steel Reinforcement</p>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="video-container relative rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[9/16] bg-slate-800 group">
+                    <img src="https://placehold.co/720x1280/0f172a/ffffff?text=Safety+Tour" alt="Site Video 4" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fa-solid fa-play play-icon text-4xl text-white/80 transition-transform duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                        <p class="text-white text-sm font-semibold truncate">Site Safety Walk</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-slate-500 mt-8 italic">* Click to play videos (Feature coming soon)</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <!-- Contact Info -->
+                <div class="w-full md:w-2/5 bg-primary p-10 md:p-14 text-white relative">
+                    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-2">Get in Touch</h2>
+                        <p class="text-blue-200 mb-10 text-sm">Let's discuss project planning, coordination, and structural engineering opportunities.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-blue-200 font-medium">Email Address</p>
+                                    <a href="mailto:fawzymahmoud939@gmail.com" class="text-lg font-semibold hover:text-blue-300 transition break-all">fawzymahmoud939@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-blue-200 font-medium">Phone Number</p>
+                                    <a href="tel:01061055230" class="block text-lg font-semibold hover:text-blue-300 transition">01061055230</a>
+                                    <a href="tel:01556600880" class="block text-lg font-semibold hover:text-blue-300 transition">01556600880</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-linkedin-in text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-blue-200 font-medium">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-fawzy-113686262" target="_blank" class="block text-lg font-semibold hover:text-blue-300 transition">Mahmoud Fawzy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="w-full md:w-3/5 bg-slate-50 p-10 md:p-14">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Send a Message</h3>
+                    
+                    <form action="https://formsubmit.co/em1978737@gmail.com" method="POST" class="space-y-6">
+                        <!-- FormSubmit Configuration (Optional but recommended) -->
+                        <input type="hidden" name="_subject" value="New submission from Portfolio Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="Name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="Email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="Subject" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white" placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                            <textarea id="message" name="Message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white resize-none" placeholder="How can I help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white font-semibold py-4 rounded-xl hover:bg-blue-800 transition shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Mahmoud Mohamed Fawzy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            if(mobileMenu.classList.contains('open')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
