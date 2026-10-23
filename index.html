@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mahmoud Mohamed Fawzy: civil engineer, planning engineer and project coordinator. Primavera P6, schedule control and progress reporting.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mahmoud Mohamed Fawzy">
+    <meta property="og:title" content="Mahmoud Mohamed Fawzy | Planning Engineer &amp; Project Coordinator">
+    <meta property="og:description" content="Civil engineer specialized in project planning, Primavera P6, schedule control and progress reporting. View my experience and get in touch.">
+    <meta property="og:url" content="https://useffawzy.github.io/Mahmoud-Fawzy/">
+    <meta property="og:image" content="https://useffawzy.github.io/Mahmoud-Fawzy/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Mahmoud Mohamed Fawzy, Planning Engineer and Project Coordinator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mahmoud Mohamed Fawzy | Planning Engineer &amp; Project Coordinator">
+    <meta name="twitter:description" content="Civil engineer specialized in project planning, Primavera P6, schedule control and progress reporting.">
+    <meta name="twitter:image" content="https://useffawzy.github.io/Mahmoud-Fawzy/og-image.jpg">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <title>Mahmoud Mohamed Fawzy | Portfolio</title>
@@ -86,8 +100,40 @@
         .theme-toggle{width:42px;height:42px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #cbd5e1;color:#475569;background:transparent;cursor:pointer;transition:.2s}
         .theme-toggle:hover{border-color:#3b82f6;color:#3b82f6}
         html.dark .theme-toggle{border-color:#3a4a6b;color:#fcd34d}
+
+        /* ===== Language toggle + RTL ===== */
+        .lang-toggle{height:42px;padding:0 16px;border-radius:9999px;border:1px solid #cbd5e1;color:#475569;background:transparent;font:600 14px/1 Cairo,Inter,sans-serif;cursor:pointer;transition:.2s;white-space:nowrap}
+        .lang-toggle:hover{border-color:#3b82f6;color:#3b82f6}
+        html.dark .lang-toggle{border-color:#3a4a6b;color:#e2e8f0}
+        html[dir=rtl] body{font-family:Cairo,Inter,sans-serif}
+        html[dir=rtl] *{letter-spacing:0!important}
+        html[dir=rtl] .border-l-2{border-left-width:0!important;border-right-width:2px!important;border-right-style:solid}
+        html[dir=rtl] .ml-4{margin-left:0!important;margin-right:1rem!important}
+        html[dir=rtl] .pl-4{padding-left:0!important;padding-right:1rem!important}
+        html[dir=rtl] .pl-8{padding-left:0!important;padding-right:2rem!important}
+        html[dir=rtl] .space-x-8>:not([hidden])~:not([hidden]){margin-left:0!important;margin-right:2rem!important}
+        html[dir=rtl] .timeline-dot{left:auto!important;right:-8px!important}
+        html[dir=rtl] a[href^="tel:"],html[dir=rtl] a[href^="mailto:"]{direction:ltr;unicode-bidi:embed;display:inline-block}
+        @media (min-width:768px){
+          html[dir=rtl] .md\:ml-0{margin-right:0!important}
+          html[dir=rtl] .md\:pl-0{padding-right:0!important}
+          html[dir=rtl] .md\:pl-10{padding-left:0!important;padding-right:2.5rem!important}
+        }
+
+        /* ===== Arabic typography polish ===== */
+        html[dir=rtl] body{line-height:1.8}
+        html[dir=rtl] h1{line-height:1.4}
+        html[dir=rtl] h2,html[dir=rtl] h3,html[dir=rtl] h4{line-height:1.5}
+        html[dir=rtl] p,html[dir=rtl] li{line-height:1.85}
+        html[dir=rtl] .text-sm{font-size:.95rem}
+        html[dir=rtl] .text-xs{font-size:.82rem}
+        html[dir=rtl] .-left-\[5px\]{left:auto!important;right:-5px!important}
+        html[dir=rtl] .date-ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+        html[dir=rtl] a[href^="tel:"]{display:block}
+        html[dir=rtl] input[type=email]{direction:ltr;text-align:right}
     </style>
-<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}if(localStorage.getItem('lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-secondary selection:text-white">
 
@@ -104,11 +150,13 @@
                     <a href="#experience" class="text-slate-600 hover:text-secondary font-medium transition">Experience</a>
                     <a href="#certificates" class="text-slate-600 hover:text-secondary font-medium transition">Certificates</a>
                     <a href="#skills" class="text-slate-600 hover:text-secondary font-medium transition">Skills</a>
+                    <button type="button" class="lang-toggle" aria-label="Switch language">عربي</button>
                     <button type="button" class="theme-toggle" aria-label="Switch between dark and light mode"><i class="fa-solid fa-moon"></i></button>
                     <a href="#contact" class="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition font-medium shadow-md">Contact Me</a>
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-3 md:hidden">
+                    <button type="button" class="lang-toggle" aria-label="Switch language">عربي</button>
                     <button type="button" class="theme-toggle" aria-label="Switch between dark and light mode"><i class="fa-solid fa-moon"></i></button>
                     <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -576,9 +624,12 @@
 document.getElementById('waForm').addEventListener('submit',function(e){
   e.preventDefault();
   var f=e.target, v=function(n){return f.elements[n].value.trim()};
-  var t='Hello Mahmoud, I am contacting you from your portfolio website.\n\n'
+  var ar=document.documentElement.lang==='ar';
+  var t=ar?('مرحباً محمود، أتواصل معك من موقعك الشخصي.\n\nالاسم: '+v('Name')+'\nالبريد: '+v('Email')
+   +(v('Subject')?'\nالموضوع: '+v('Subject'):'')+'\n\n'+v('Message'))
+   :('Hello Mahmoud, I am contacting you from your portfolio website.\n\n'
    +'Name: '+v('Name')+'\nEmail: '+v('Email')
-   +(v('Subject')?'\nSubject: '+v('Subject'):'')+'\n\n'+v('Message');
+   +(v('Subject')?'\nSubject: '+v('Subject'):'')+'\n\n'+v('Message'));
   window.open('https://wa.me/201556600880?text='+encodeURIComponent(t),'_blank');
 });
 </script>
@@ -597,6 +648,44 @@ document.getElementById('waForm').addEventListener('submit',function(e){
     });
   });
   sync();
+})();
+</script>
+<script>
+(function(){
+  var AR={"Mahmoud": "محمود", "Fawzy": "فوزي", "Mohamed Fawzy": "محمد فوزي", "Mahmoud Fawzy": "محمود فوزي", "About": "نبذة", "Experience": "الخبرة", "Certificates": "الشهادات", "Skills": "المهارات", "Contact Me": "تواصل معي", "Contact": "تواصل", "Civil Engineer": "مهندس مدني", "Project Coordinator & Planning Engineer dedicated to precision, timely execution, and seamless coordination across multidisciplinary construction projects.": "منسق مشاريع ومهندس تخطيط، ملتزم بالدقة والتنفيذ في الوقت المحدد والتنسيق السلس بين مختلف التخصصات في مشاريع الإنشاءات.", "View Experience": "عرض الخبرة", "Get in Touch": "تواصل معي", "4+ Years": "+4 سنوات", "Education": "التعليم", "Bachelor of Civil Engineering": "بكالوريوس الهندسة المدنية", "Cairo University, Egypt": "جامعة القاهرة، مصر", "May 2021": "مايو 2021", "Overall Grade: Good": "التقدير العام: جيد", "Graduation Project:": "مشروع التخرج:", "Concrete Project (Excellent Grade)": "مشروع خرسانة (تقدير ممتاز)", "Professional Experience": "الخبرة المهنية", "Dar Al Handasah": "دار الهندسة", "06/2023 - Present": "06/2023 - الآن", "10/2025 - Present": "10/2025 - الآن", "Planning Engineer": "مهندس تخطيط", "Project Coordinator": "منسق مشاريع", "Site Monitoring Engineer (Client Representative)": "مهندس متابعة موقع (ممثل العميل)", "Al-Salam Office for Contracting & Supplies": "مكتب السلام للمقاولات والتوريدات", "Technical Office and Finishing Engineer": "مهندس مكتب فني وتشطيبات", "Develop and prepare project schedules using Primavera P6.": "إعداد وتطوير الجداول الزمنية للمشروع باستخدام Primavera P6.", "Monitor project progress and compare actual performance against baseline.": "متابعة تقدم المشروع ومقارنة الأداء الفعلي بالجدول الأساسي.", "Analyze schedule variances and recommend corrective actions.": "تحليل انحرافات الجدول الزمني والتوصية بإجراءات تصحيحية.", "Prepare weekly and monthly progress reports.": "إعداد تقارير التقدم الأسبوعية والشهرية.", "Coordinate with execution teams to ensure adherence to the project plan.": "التنسيق مع فرق التنفيذ لضمان الالتزام بخطة المشروع.", "Identify and monitor the Critical Path of the project.": "تحديد المسار الحرج للمشروع ومتابعته.", "Prepare recovery and mitigation plans in case of delays.": "إعداد خطط التعافي والتخفيف في حالة التأخير.", "Coordinated activities to ensure timelines, scope, and deliverables were met.": "تنسيق الأنشطة لضمان الالتزام بالجداول الزمنية والنطاق والمخرجات.", "Assisted in planning, executing, and closing projects according to company standards.": "المساعدة في تخطيط المشاريع وتنفيذها وإغلاقها وفقاً لمعايير الشركة.", "Acted as a liaison between project managers, team members, and stakeholders.": "العمل كحلقة وصل بين مديري المشاريع وأعضاء الفريق وأصحاب المصلحة.", "Prepared and maintained project documentation, schedules, and reports.": "إعداد وتحديث مستندات المشروع والجداول والتقارير.", "Organized meetings, prepared agendas, and documented meeting minutes.": "تنظيم الاجتماعات وإعداد جداول الأعمال وتدوين محاضر الاجتماعات.", "Monitored budgets and supported cost control activities.": "متابعة الميزانيات ودعم أنشطة التحكم في التكلفة.", "Conducted regular site visits to monitor construction progress.": "إجراء زيارات دورية للموقع لمتابعة تقدم أعمال الإنشاء.", "Assessed actual execution status against planned schedules and milestones.": "تقييم حالة التنفيذ الفعلية مقارنة بالجداول الزمنية والمراحل المخططة.", "Evaluated construction progress percentages (e.g., 50%, 80%) for different elements.": "تقدير نسب إنجاز الأعمال (مثل 50% و80%) لمختلف العناصر.", "Prepared progress reports reflecting current site conditions.": "إعداد تقارير تقدم تعكس الأوضاع الحالية بالموقع.", "Identified completed, ongoing, and delayed construction activities.": "تحديد الأنشطة المنجزة والجارية والمتأخرة.", "Provided technical feedback without direct site supervision.": "تقديم ملاحظات فنية دون إشراف مباشر على الموقع.", "Technical coordination and preparation of project documents.": "التنسيق الفني وإعداد مستندات المشروع.", "Supervision of finishing works and quality control.": "الإشراف على أعمال التشطيبات ومراقبة الجودة.", "Coordination with consultants, subcontractors, and site teams.": "التنسيق مع الاستشاريين ومقاولي الباطن وفرق الموقع.", "Planning & Controlling (HA Management)": "التخطيط والمتابعة (HA Management)", "Proficient in Primavera P6:": "إتقان Primavera P6:", "creating baseline schedules, defining activities, milestones, and dependencies.": "إنشاء الجداول الأساسية وتحديد الأنشطة والمراحل الرئيسية والعلاقات بينها.", "Project Monitoring & Tracking:": "متابعة المشروع وتتبعه:", "updating progress, tracking delays, and analyzing performance.": "تحديث نسب الإنجاز وتتبع التأخيرات وتحليل الأداء.", "Reporting & Documentation:": "التقارير والتوثيق:", "progress reports, variance analysis, project control documentation.": "تقارير التقدم وتحليل الانحرافات وتوثيق التحكم في المشروع.", "Practical Application:": "التطبيق العملي:", "techniques for effective planning, resource allocation, and schedule optimization.": "أساليب التخطيط الفعال وتوزيع الموارد وتحسين الجدول الزمني.", "Advanced Structural Diploma": "دبلومة الإنشائي المتقدمة", "Civil Academy": "سيفيل أكاديمي", "Comprehensive design training encompassing various complex structures including:": "تدريب شامل على تصميم منشآت معقدة متنوعة، منها:", "5-Floor Villa": "فيلا 5 أدوار", "25-Floor Tower": "برج 25 دور", "Elevated Tank": "خزان علوي", "Halls": "قاعات", "Software utilized: ETABS, SAP, SAFE, AutoCAD, CSI, Revit.": "البرامج المستخدمة: ETABS، SAP، SAFE، AutoCAD، CSI، Revit.", "Skills & Languages": "المهارات واللغات", "Software & Tools": "البرامج والأدوات", "Advanced": "متقدم", "MS Office (Word, Excel, PowerPoint)": "حزمة مايكروسوفت أوفيس (وورد، إكسل، باوربوينت)", "Expert": "خبير", "Structural Software": "البرامج الإنشائية", "Personal Skills": "المهارات الشخصية", "Strong Communication": "مهارات تواصل قوية", "Time Management": "إدارة الوقت", "Problem Solving": "حل المشكلات", "Multitasking Ability": "القدرة على تعدد المهام", "Attention to Detail": "الاهتمام بالتفاصيل", "Ability to Work Under Pressure": "القدرة على العمل تحت الضغط", "Team Player": "العمل ضمن فريق", "Languages": "اللغات", "Arabic": "العربية", "Native": "اللغة الأم", "English": "الإنجليزية", "Professional": "احترافي", "Let's discuss project planning, coordination, and structural engineering opportunities.": "دعنا نتحدث عن فرص التخطيط وتنسيق المشاريع والهندسة الإنشائية.", "Email Address": "البريد الإلكتروني", "Phone Number": "رقم الهاتف", "Send a Message": "أرسل رسالة", "Full Name": "الاسم الكامل", "Subject": "الموضوع", "Message": "الرسالة", "Send via WhatsApp": "إرسال عبر واتساب", "© 2026 Mahmoud Mohamed Fawzy. All Rights Reserved.": "© 2026 محمود محمد فوزي. جميع الحقوق محفوظة.", "Let’s discuss project planning, coordination, and structural engineering opportunities.": "دعنا نتحدث عن فرص التخطيط وتنسيق المشاريع والهندسة الإنشائية."};
+  var ATTR={"John Doe": "محمد أحمد", "Project Inquiry": "استفسار عن مشروع", "How can I help you?": "كيف يمكنني مساعدتك؟", "Mahmoud Mohamed Fawzy": "محمود محمد فوزي"};
+  var root=document.documentElement, items=[], attrs=[];
+  document.querySelectorAll('span,p').forEach(function(el){
+    if(/^\d{2}\/\d{4}( - .+)?$/.test(el.textContent.trim().replace(/\s+/g,' '))){el.classList.add('date-ltr')}
+  });
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+    var p=n.parentNode.nodeName;
+    return (p==='SCRIPT'||p==='STYLE'||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}});
+  while(w.nextNode()){
+    var n=w.currentNode, raw=n.nodeValue, t=raw.trim(), k=t.replace(/\s+/g,' ');
+    if(AR[k]){items.push({n:n,en:raw,ar:raw.replace(t,function(){return AR[k]})})}
+  }
+  document.querySelectorAll('[placeholder],img[alt]').forEach(function(el){
+    ['placeholder','alt'].forEach(function(a){
+      var v=el.getAttribute(a);
+      if(v&&ATTR[v]){attrs.push({el:el,a:a,en:v,ar:ATTR[v]})}
+    });
+  });
+  var enTitle=document.title, arTitle='محمود محمد فوزي | بورتفوليو';
+  function setLang(l){
+    var ar=l==='ar';
+    items.forEach(function(i){i.n.nodeValue=ar?i.ar:i.en});
+    attrs.forEach(function(i){i.el.setAttribute(i.a,ar?i.ar:i.en)});
+    root.lang=ar?'ar':'en'; root.dir=ar?'rtl':'ltr';
+    document.title=ar?arTitle:enTitle;
+    document.querySelectorAll('.lang-toggle').forEach(function(b){b.textContent=ar?'EN':'عربي'});
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  document.querySelectorAll('.lang-toggle').forEach(function(b){
+    b.addEventListener('click',function(){setLang(root.lang==='ar'?'en':'ar')});
+  });
+  var saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
+  if(saved==='ar'){setLang('ar')}
 })();
 </script>
 </body>
