@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <title>Mahmoud Mohamed Fawzy | Portfolio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -58,7 +60,34 @@
         #mobile-menu.open {
             max-height: 400px;
         }
+
+        /* ===== Dark mode ===== */
+        body{transition:background-color .3s,color .3s}
+        html.dark{color-scheme:dark}
+        html.dark body{background:#0b1220;color:#e2e8f0}
+        html.dark .bg-white{background-color:#111a2e!important}
+        html.dark .bg-slate-50{background-color:#0b1220!important}
+        html.dark .bg-slate-100{background-color:#1a2540!important}
+        html.dark .bg-blue-50{background-color:#16233f!important}
+        html.dark .bg-blue-100{background-color:#1c2d52!important}
+        html.dark .text-dark{color:#f1f5f9!important}
+        html.dark .text-primary{color:#93b4ff!important}
+        html.dark .text-slate-800,html.dark .text-slate-700{color:#dbe3ee!important}
+        html.dark .text-slate-600{color:#b4c0d2!important}
+        html.dark .text-slate-500{color:#94a3b8!important}
+        html.dark .border-slate-200,html.dark .border-slate-100,html.dark .border-slate-300{border-color:#26344f!important}
+        html.dark .border-blue-100{border-color:#24365e!important}
+        html.dark .hover\:bg-slate-50:hover,html.dark .hover\:bg-blue-50:hover{background-color:#1a2540!important}
+        html.dark #home{background-image:linear-gradient(to bottom right,#0b1220,#0f1b36)!important}
+        html.dark .glass-nav{background:rgba(11,18,32,.88)}
+        html.dark input,html.dark textarea{background:#0b1220!important;color:#e2e8f0!important;border-color:#2b3a59!important}
+        html.dark input::placeholder,html.dark textarea::placeholder{color:#64748b}
+        html.dark .bg-primary .text-primary,html.dark .bg-primary.text-primary{color:#fff!important}
+        .theme-toggle{width:42px;height:42px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #cbd5e1;color:#475569;background:transparent;cursor:pointer;transition:.2s}
+        .theme-toggle:hover{border-color:#3b82f6;color:#3b82f6}
+        html.dark .theme-toggle{border-color:#3a4a6b;color:#fcd34d}
     </style>
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();</script>
 </head>
 <body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-secondary selection:text-white">
 
@@ -67,7 +96,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <a href="#home" class="text-2xl font-bold text-primary tracking-tighter">MF<span class="text-secondary">.</span></a>
+                    <a href="#home" class="text-2xl font-bold text-primary tracking-tight whitespace-nowrap">Mahmoud <span class="text-secondary">Fawzy</span></a>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
@@ -75,10 +104,12 @@
                     <a href="#experience" class="text-slate-600 hover:text-secondary font-medium transition">Experience</a>
                     <a href="#certificates" class="text-slate-600 hover:text-secondary font-medium transition">Certificates</a>
                     <a href="#skills" class="text-slate-600 hover:text-secondary font-medium transition">Skills</a>
+                    <button type="button" class="theme-toggle" aria-label="Switch between dark and light mode"><i class="fa-solid fa-moon"></i></button>
                     <a href="#contact" class="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition font-medium shadow-md">Contact Me</a>
                 </div>
                 <!-- Mobile Menu Button -->
-                <div class="flex items-center md:hidden">
+                <div class="flex items-center gap-3 md:hidden">
+                    <button type="button" class="theme-toggle" aria-label="Switch between dark and light mode"><i class="fa-solid fa-moon"></i></button>
                     <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
@@ -102,18 +133,18 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-3/5 space-y-6">
                 <p class="text-secondary font-semibold tracking-wide uppercase">Civil Engineer</p>
-                <h1 class="text-5xl md:text-7xl font-bold text-dark leading-tight">
-                    Mahmoud <br />Mohamed Fawzy
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-dark leading-tight tracking-tight">
+                    Mahmoud <br /><span class="whitespace-nowrap">Mohamed Fawzy</span>
                 </h1>
                 <p class="text-xl text-slate-600 font-light max-w-lg">
                     Project Coordinator & Planning Engineer dedicated to precision, timely execution, and seamless coordination across multidisciplinary construction projects.
                 </p>
                 
                 <div class="flex gap-4 pt-4">
-                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-fawzy-113686262" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
+                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-fawzy-11368b262" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
                         <i class="fa-brands fa-linkedin-in text-xl"></i>
                     </a>
-                    <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
+                    <a href="https://www.facebook.com/share/1CBHMT8oEP/" target="_blank" rel="noopener" aria-label="Facebook" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
                         <i class="fa-brands fa-facebook-f text-xl"></i>
                     </a>
                     <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border border-slate-200">
@@ -452,7 +483,7 @@
                                 </div>
                                 <div>
                                     <p class="text-sm text-blue-200 font-medium">LinkedIn</p>
-                                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-fawzy-113686262" target="_blank" class="block text-lg font-semibold hover:text-blue-300 transition">Mahmoud Fawzy</a>
+                                    <a href="https://www.linkedin.com/in/mahmoud-mohamed-fawzy-11368b262" target="_blank" class="block text-lg font-semibold hover:text-blue-300 transition">Mahmoud Fawzy</a>
                                 </div>
                             </div>
                         </div>
@@ -550,6 +581,23 @@ document.getElementById('waForm').addEventListener('submit',function(e){
    +(v('Subject')?'\nSubject: '+v('Subject'):'')+'\n\n'+v('Message');
   window.open('https://wa.me/201556600880?text='+encodeURIComponent(t),'_blank');
 });
+</script>
+<script>
+(function(){
+  var root=document.documentElement;
+  function sync(){
+    var d=root.classList.contains('dark');
+    document.querySelectorAll('.theme-toggle i').forEach(function(i){i.className='fa-solid '+(d?'fa-sun':'fa-moon')});
+  }
+  document.querySelectorAll('.theme-toggle').forEach(function(b){
+    b.addEventListener('click',function(){
+      root.classList.toggle('dark');
+      try{localStorage.setItem('theme',root.classList.contains('dark')?'dark':'light')}catch(e){}
+      sync();
+    });
+  });
+  sync();
+})();
 </script>
 </body>
 </html>
